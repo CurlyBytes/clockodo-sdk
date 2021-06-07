@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31019.35
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{98171520-DE38-4FC1-8293-02209BC741F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{42BDA54F-5876-4378-BFD6-BB3E516A1D38}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{067125A8-E4E7-4B8A-95A7-BB9B0B0F9EEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{B781B3BF-5002-4DA7-8E4D-D9028C56DBA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clockodo.Sdk.UnitTesting", "tests\Clockodo.Sdk.UnitTesting\Clockodo.Sdk.UnitTesting.csproj", "{FB1EA1C6-DE29-4FF4-BF94-1D1C54620702}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clockodo.Contracts", "src\Clockodo.Contracts\Clockodo.Contracts.csproj", "{073F66E5-3E4B-437B-8C64-43B61FE04EC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clockodo.Sdk", "src\Clockodo.Sdk\Clockodo.Sdk.csproj", "{0D58F916-F362-433D-8C47-306CDEECF9FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB1EA1C6-DE29-4FF4-BF94-1D1C54620702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB1EA1C6-DE29-4FF4-BF94-1D1C54620702}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB1EA1C6-DE29-4FF4-BF94-1D1C54620702}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB1EA1C6-DE29-4FF4-BF94-1D1C54620702}.Release|Any CPU.Build.0 = Release|Any CPU
+		{073F66E5-3E4B-437B-8C64-43B61FE04EC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{073F66E5-3E4B-437B-8C64-43B61FE04EC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{073F66E5-3E4B-437B-8C64-43B61FE04EC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{073F66E5-3E4B-437B-8C64-43B61FE04EC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D58F916-F362-433D-8C47-306CDEECF9FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D58F916-F362-433D-8C47-306CDEECF9FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D58F916-F362-433D-8C47-306CDEECF9FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D58F916-F362-433D-8C47-306CDEECF9FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FB1EA1C6-DE29-4FF4-BF94-1D1C54620702} = {42BDA54F-5876-4378-BFD6-BB3E516A1D38}
+		{073F66E5-3E4B-437B-8C64-43B61FE04EC6} = {98171520-DE38-4FC1-8293-02209BC741F6}
+		{0D58F916-F362-433D-8C47-306CDEECF9FD} = {98171520-DE38-4FC1-8293-02209BC741F6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EBBF5C89-DBAE-4663-8FF3-14408EAC0F61}
+	EndGlobalSection
+EndGlobal
