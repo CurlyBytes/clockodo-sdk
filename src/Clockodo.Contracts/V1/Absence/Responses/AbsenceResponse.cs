@@ -101,7 +101,7 @@ namespace Clockodo.Contracts.V1.Absence.Responses
         /// </summary>
         [JsonPropertyName("date_enquired")]
         [AliasAs("date_enquired")]
-        public string? DateEnquired { get; set; }
+        public string DateEnquired { get; set; }
 
         /// <summary>
         /// ate at which the absence request has been approved, declined or cancelled in format YYYY-MM-DD

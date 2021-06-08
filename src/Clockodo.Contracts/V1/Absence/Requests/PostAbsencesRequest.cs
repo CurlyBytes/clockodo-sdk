@@ -47,5 +47,36 @@ namespace Clockodo.Contracts.V1.Absence.Requests
         [AliasAs("type")]
         public int Type { get; set; }
 
+        /// <summary>
+        /// ID of the corresponding co-worker
+        /// </summary>
+        [JsonPropertyName("users_id")]
+        [AliasAs("users_id")]
+        public int? UsersId { get; set; }
+
+        /// <summary>
+        /// Note
+        /// </summary>
+        [JsonPropertyName("note")]
+        [AliasAs("note")]
+        public string Note { get; set; }
+
+
+        /// <summary>
+        /// Amount of absence days (null for overtime reduction)
+        ////Only with access rights for absence administration or in case of own absences
+        /// </summary>
+        [JsonPropertyName("count_days")]
+        [AliasAs("count_days")]
+        public float? CountDays { get; set; }
+
+
+        /// <summary>
+        /// 	Amount of hours of overtime reduction (null in other cases)
+        ////Only with access rights for absence administration or in case of own absences
+        /// </summary>
+        [JsonPropertyName("count_hours")]
+        [AliasAs("count_hours")]
+        public float? CountHours { get; set; }
     }
 }
