@@ -1,4 +1,5 @@
-﻿using Clockodo.Contracts.V1.Absence.Enums;
+﻿using Clockodo.Contracts.V1;
+using Clockodo.Contracts.V1.Absence.Enums;
 using Clockodo.Contracts.V1.Absence.Requests;
 using Clockodo.Contracts.V1.Absence.Responses;
 using Clockodo.Sdk;
@@ -17,17 +18,15 @@ namespace Clockodo.TerminalSample
     {
         static async Task Main(string[] args)
         {
-            var username = "franz.noyaba@gmail.com";
-            var password = "8c0477c9ad68448ac7c296ef6ca63c23";
-            var authHeader = Convert.ToBase64String(Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
-            var baseAddress = "https://my.clockodo.com";
+  
+            var authHeader = Convert.ToBase64String(Encoding.GetEncoding("ISO-8859-1").GetBytes(ApiRoutes.ClockodoUserName + ":" + ApiRoutes.ClockodoPassword));
             var refitSettings = new RefitSettings()
             {
                 AuthorizationHeaderValueGetter = () => Task.FromResult(authHeader)
             };
 
 
-            IAbsences absences = RestService.For<IAbsences>(baseAddress, refitSettings);
+            IAbsences absences = RestService.For<IAbsences>(ApiRoutes.BaseAddress, refitSettings);
 
 
             try
