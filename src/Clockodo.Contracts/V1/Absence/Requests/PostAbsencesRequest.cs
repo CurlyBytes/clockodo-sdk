@@ -1,15 +1,14 @@
-﻿using Clockodo.Contracts.V1.Enums;
+﻿using Clockodo.Contracts.V1.Absence.Enums;
 using Refit;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.Json.Serialization;
 
-namespace Clockodo.Contracts.V1.Requests
+namespace Clockodo.Contracts.V1.Absence.Requests
 {
     public class PostAbsencesRequest
     {
-
 
         /// <summary>
         /// Start date in YYYY-MM-DD format
@@ -25,6 +24,7 @@ namespace Clockodo.Contracts.V1.Requests
         [AliasAs("date_until")]
         public string DateUntil { get; set; }
 
+ 
         /// <summary>
         /// Type of the absence:
         ////1: Regular holiday
@@ -46,7 +46,6 @@ namespace Clockodo.Contracts.V1.Requests
         [JsonPropertyName("type")]
         [AliasAs("type")]
         public int Type { get; set; }
-
 
     }
 }

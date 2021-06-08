@@ -11,7 +11,7 @@ namespace Clockodo.Contracts.V1
 
         public static class Absences
         {
-            public const string GetListAbsences = "/api/absences";
+            public const string GetListAbsences = Base + "/absences";
             public const string Get = Base + "/absences/{id}";
             public const string Post = Base + "/absences";
             public const string Put = Base + "/absences/{id}";

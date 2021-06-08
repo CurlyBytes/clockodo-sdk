@@ -1,16 +1,14 @@
-﻿using Clockodo.Contracts.V1.Enums;
+﻿using Clockodo.Contracts.V1.Absence.Enums;
 using Refit;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.Json.Serialization;
 
-namespace Clockodo.Contracts.V1.Requests
+namespace Clockodo.Contracts.V1.Absence.Requests
 {
     public class PutAbsencesRequest
     {
-
-
         /// <summary>
         /// Start date in YYYY-MM-DD format
         /// </summary>|
@@ -24,6 +22,7 @@ namespace Clockodo.Contracts.V1.Requests
         [JsonPropertyName("date_until")]
         [AliasAs("date_until")]
         public string DateUntil { get; set; }
+
 
         /// <summary>
         /// Type of the absence:
@@ -45,14 +44,14 @@ namespace Clockodo.Contracts.V1.Requests
         /// </summary>
         [JsonPropertyName("type")]
         [AliasAs("type")]
-        public AbsenceTypeEnum Type { get; set; }
+        public int Type { get; set; }
 
         /// <summary>
         /// ID of the corresponding co-worker
         /// </summary>
-        [JsonPropertyName("user_id")]
-        [AliasAs("user_id")]
-        public int user_id { get; set; }
+        [JsonPropertyName("users_id")]
+        [AliasAs("users_id")]
+        public int? UsersId { get; set; }
 
         /// <summary>
         /// Note
@@ -62,14 +61,14 @@ namespace Clockodo.Contracts.V1.Requests
         public string Note { get; set; }
 
 
-
         /// <summary>
         /// Amount of absence days (null for overtime reduction)
         ////Only with access rights for absence administration or in case of own absences
         /// </summary>
         [JsonPropertyName("count_days")]
         [AliasAs("count_days")]
-        public float CountDays { get; set; }
+        public float? CountDays { get; set; }
+
 
         /// <summary>
         /// 	Amount of hours of overtime reduction (null in other cases)
@@ -77,7 +76,7 @@ namespace Clockodo.Contracts.V1.Requests
         /// </summary>
         [JsonPropertyName("count_hours")]
         [AliasAs("count_hours")]
-        public float CountHours { get; set; }
+        public float? CountHours { get; set; }
 
     }
 }

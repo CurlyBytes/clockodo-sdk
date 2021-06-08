@@ -1,10 +1,11 @@
-﻿using Clockodo.Contracts.V1.Enums;
+﻿using Clockodo.Contracts.V1.Absence.Enums;
+using Refit;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.Json.Serialization;
 
-namespace Clockodo.Contracts.V1.Responses
+namespace Clockodo.Contracts.V1.Absence.Responses
 {
     public class AbsenceResponse
     {
@@ -12,24 +13,28 @@ namespace Clockodo.Contracts.V1.Responses
         /// ID of the absence
         /// </summary>
         [JsonPropertyName("id")]
+        [AliasAs("id")]
         public int Id { get; set; }
 
         /// <summary>
         /// ID of the corresponding co-worker
         /// </summary>
-        [JsonPropertyName("user_id")]
-        public int UserId { get; set; }
+        [JsonPropertyName("users_id")]
+        [AliasAs("users_id")]
+        public int UsersId { get; set; }
 
         /// <summary>
         /// Start date in YYYY-MM-DD format
         /// </summary>|
         [JsonPropertyName("date_since")]
+        [AliasAs("date_since")]
         public string DateSince { get; set; }
 
         /// <summary>
         /// End date in YYYY-MM-DD format
         /// </summary>
         [JsonPropertyName("date_until")]
+        [AliasAs("date_until")]
         public string DateUntil { get; set; }
 
         /// <summary>
@@ -42,6 +47,7 @@ namespace Clockodo.Contracts.V1.Responses
         //Only with access rights for absence administration or in case of own absences
         /// </summary>
         [JsonPropertyName("status")]
+        [AliasAs("status")]
         public AbsenceStatusEnum Status { get; set; }
 
         /// <summary>
@@ -63,12 +69,14 @@ namespace Clockodo.Contracts.V1.Responses
         ////Only with access rights for absence administration or in case of own absences
         /// </summary>
         [JsonPropertyName("type")]
+        [AliasAs("type")]
         public AbsenceTypeEnum Type { get; set; }
 
         /// <summary>
         /// Note
         /// </summary>
         [JsonPropertyName("note")]
+        [AliasAs("note")]
         public string Note { get; set; }
 
         /// <summary>
@@ -76,6 +84,7 @@ namespace Clockodo.Contracts.V1.Responses
         ////Only with access rights for absence administration or in case of own absences
         /// </summary>
         [JsonPropertyName("count_days")]
+        [AliasAs("count_days")] 
         public float? CountDays { get; set; }
 
         /// <summary>
@@ -83,6 +92,7 @@ namespace Clockodo.Contracts.V1.Responses
         ////Only with access rights for absence administration or in case of own absences
         /// </summary>
         [JsonPropertyName("count_hours")]
+        [AliasAs("count_hours")]
         public float? CountHours { get; set; }
 
         /// <summary>
@@ -90,6 +100,7 @@ namespace Clockodo.Contracts.V1.Responses
         ////Only with access rights for absence administration or in case of own absences
         /// </summary>
         [JsonPropertyName("date_enquired")]
+        [AliasAs("date_enquired")]
         public string? DateEnquired { get; set; }
 
         /// <summary>
@@ -97,6 +108,7 @@ namespace Clockodo.Contracts.V1.Responses
         ////Only with access rights for absence administration or in case of own absences
         /// </summary>
         [JsonPropertyName("date_approved")]
+        [AliasAs("date_approved")]
         public string DateApprove { get; set; }
 
         /// <summary>
@@ -104,6 +116,7 @@ namespace Clockodo.Contracts.V1.Responses
         ////Only with access rights for absence administration or in case of own absences
         /// </summary>
         [JsonPropertyName("approved_by")]
+        [AliasAs("approved_by")]
         public int ApproveBy { get; set; }
 
     }
