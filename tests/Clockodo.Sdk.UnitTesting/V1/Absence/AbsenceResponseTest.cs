@@ -16,7 +16,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Clockodo.Sdk.UnitTesting.V1
+namespace Clockodo.Sdk.UnitTesting.V1.Absence
 {
     public class AbsenceResponseTest
     {

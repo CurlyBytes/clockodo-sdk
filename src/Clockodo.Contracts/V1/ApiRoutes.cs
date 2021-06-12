@@ -27,6 +27,7 @@ namespace Clockodo.Contracts.V1
             public const string GetClockUpdate = Base + "/clock/update";
             public const string GetSearchText = Base + "/clock/searchtexts";
             public const string PostStartClock = Base + "/clock";
+            public const string PutClock = Base + "/clock/{id}";
             public const string DeleteStopClock = Base + "/clock/{id}";
         }
 
