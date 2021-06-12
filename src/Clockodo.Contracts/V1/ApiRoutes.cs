@@ -9,8 +9,8 @@ namespace Clockodo.Contracts.V1
         public const string Root = "api";
         public const string Base = "/" + Root ;
         public const string BaseAddress = "https://my.clockodo.com";
-        public const string ClockodoUserName = "franz.noyaba@gmail.com";
-        public const string ClockodoPassword = "8c0477c9ad68448ac7c296ef6ca63c23";
+        public const string ClockodoUserName = "";
+        public const string ClockodoPassword = "";
 
         public static class Absences
         {
