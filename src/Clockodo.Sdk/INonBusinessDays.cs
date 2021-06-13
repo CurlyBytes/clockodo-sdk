@@ -16,7 +16,7 @@ namespace Clockodo.Sdk
     public interface INonBusinessDays
     {
         [Get(ApiRoutes.NonBusinessDays.GetListNonBusinessDays)]
-        Task<ApiResponse<WrapperNonBusinessDaysResponse>> GetAllAbsences([Query] GetNonBusinessDaysRequest getNonBusinessDaysRequest);
+        Task<ApiResponse<WrapperNonBusinessDaysResponse>> GetNonBusinessDays([Query] GetNonBusinessDaysRequest getNonBusinessDaysRequest);
 
     }
 }
