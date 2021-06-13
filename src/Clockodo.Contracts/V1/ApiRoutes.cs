@@ -36,8 +36,19 @@ namespace Clockodo.Contracts.V1
             public const string GetListCustomers = Base + "/customers";
             public const string GetCustomersById = Base + "/customers/{id}";
             public const string PostCustomers = Base + "/customers";
-            public const string PutCustomers = Base + "/customers/{id}";
+            public const string PutCustomers = Base + "/customeers/{id}";
             public const string DeleteCustomer = Base + "/customers/{id}";
+        }
+
+        public static class Entries
+        {
+            public const string GetListEntries = Base + "/entries";
+            public const string GetEntriesById = Base + "/entries/{id}";
+            public const string PostEntries = Base + "/entries";
+            public const string PostLumpSumEntries = Base + "/entries";
+            public const string PostLumpSumServiceEntries = Base + "/entries";
+            public const string PutEntries = Base + "/entries/{id}";
+            public const string DeleteEntries = Base + "/entries/{id}";
         }
 
         public static class EntryGroups
