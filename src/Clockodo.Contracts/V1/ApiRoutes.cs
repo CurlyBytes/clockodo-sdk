@@ -132,8 +132,10 @@ namespace Clockodo.Contracts.V1
         {
             public const string GetListTargetHours = Base + "/targethours";
             public const string GetTargetHours = Base + "/targethours/{id}";
-            public const string PostTargetHours = Base + "/targethours";
-            public const string PutTargetHours = Base + "/targethours/{id}";
+            public const string PostTargetHoursWeekly = Base + "/targethours";
+            public const string PostTargetHoursMonthly = Base + "/targethours";
+            public const string PutTargetHoursWeekly = Base + "/targethours/{id}";
+            public const string PutTargetHoursMonthly = Base + "/targethours/{id}";
             public const string DeleteteTargetHours = Base + "/targethours/{id}";
         }
 
