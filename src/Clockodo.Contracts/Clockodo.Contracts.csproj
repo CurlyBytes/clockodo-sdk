@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <Folder Include="V1\NonBusinessGroup\Requests\" />
+    <Folder Include="V1\Users\Requests\" />
   </ItemGroup>
 
 </Project>
