@@ -1,6 +1,8 @@
 ﻿using Clockodo.Contracts.V1;
 using Clockodo.Contracts.V1.Absence.Requests;
 using Clockodo.Contracts.V1.Absence.Responses;
+using Clockodo.Contracts.V1.Projects.Requests;
+using Clockodo.Contracts.V1.Projects.Response;
 using Refit;
 using System;
 using System.Collections.Generic;
@@ -11,21 +13,21 @@ using System.Threading.Tasks;
 namespace Clockodo.Sdk
 {
     [Headers("Authorization: Basic")]
-    public interface IAbsences
+    public interface IProject
     {
-        [Get(ApiRoutes.Absences.GetListAbsences)]
-        Task<ApiResponse<WrapperAbsencesResponse>> GetAllAbsences([Query]GetAbsenceRequest getAbsence);
+        [Get(ApiRoutes.Projects.GetListProjects)]
+        Task<ApiResponse<WrapperProjectResponse>> GetAllProjects();
 
-        [Get(ApiRoutes.Absences.Get)]
-        Task<ApiResponse<WrapperAbsenceResponse>> GetllAbsencesById(int id);
+        [Get(ApiRoutes.Projects.GetProjects)]
+        Task<ApiResponse<WrapperAbsenceResponse>> GetllProjectsById(int id);
 
-        [Post(ApiRoutes.Absences.GetListAbsences)]
-        Task<ApiResponse<WrapperAbsenceResponse>> PostAbsencesAsync([Body(BodySerializationMethod.UrlEncoded)] PostAbsencesRequest postAbsences);
+        [Post(ApiRoutes.Projects.PostProjects)]
+        Task<ApiResponse<WrapperAbsenceResponse>> PostProjectsAsync([Body(BodySerializationMethod.UrlEncoded)] PostProjectsRequest postProjectsRequest);
 
-        [Put(ApiRoutes.Absences.Put)]
-        Task<ApiResponse<WrapperAbsenceResponse>> PutAbsencesAsync(int id, [Body(BodySerializationMethod.UrlEncoded)] PutAbsencesRequest putAbsences);
+        [Put(ApiRoutes.Projects.PutProjects)]
+        Task<ApiResponse<WrapperAbsenceResponse>> PutProjectsAsync(int id, [Body(BodySerializationMethod.UrlEncoded)] PutProjectsRequest putProjectsRequest);
 
-        [Delete(ApiRoutes.Absences.Delete)]
-        Task<ApiResponse<string>> DeleteAbsencesAsync(int id);
+        [Delete(ApiRoutes.Projects.DeleteteProjects)]
+        Task<ApiResponse<string>> DeleteProjectsAsync(int id);
     }
 }
